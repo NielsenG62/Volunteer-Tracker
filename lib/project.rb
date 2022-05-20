@@ -11,5 +11,8 @@ class Project
     @title
   end
 
-end
+  def id
+    @id
+  end
 
+end
