@@ -42,4 +42,9 @@ class Project
     Project.new ({:title => title, :id => id})
   end
 
+  def update(attributes)
+    @title = attributes.fetch(:title)
+    @id = attributes.fetch(:id)
+  end
+
 end
