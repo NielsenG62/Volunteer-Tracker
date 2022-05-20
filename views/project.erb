@@ -1,7 +1,7 @@
 <h4>Project Name: <%= @project.title %></h4>
 
 
-<h3>Project Songs</h3>
+<h3>Project Volunteers</h3>
 
   <% if @project.volunteers %>
     <ul>
@@ -17,8 +17,8 @@
 
 <form action="/projects/<%= @project.id %>/volunteers" method="post">
   <div class="form-group">
-    <label for="title">Volunteer name</label>
-    <input id="title" name="title" class="form-control" type="text">
+    <label for="volunteer_name">Volunteer name</label>
+    <input id="volunteer_name" name="volunteer_name" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Add volunteer</button>
 </form>
