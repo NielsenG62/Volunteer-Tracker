@@ -67,7 +67,6 @@ patch('/projects/:id/volunteers/:volunteer_id') do
   volunteer = Volunteer.find(params[:name].to_i())
   name = params[:vol_name]
   volunteer.update({:name => name, :id => @project.id})
-  binding.pry
   erb(:project)
 end
 
