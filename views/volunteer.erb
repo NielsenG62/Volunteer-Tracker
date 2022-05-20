@@ -1,11 +1,11 @@
 <h2>Volunteer: <%= @volunteer.name %></h2>
-<h3>Project: <%= @volunteer.project.name %></h3>
+<h3>Project: <%= @volunteer.project.title %></h3>
 
 <form action="/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
 
-  <label for="name">Rename volunteer</label>
-  <input id="name" name="name" type="text">
+  <label for="vol_name">Rename volunteer</label>
+  <input id="vol_name" name="vol_name" type="text">
 
   <button type="submit">Update volunteer</button>
 </form>
@@ -16,4 +16,4 @@
   <button type="submit">Remove volunteer</button>
 </form>
 
-<a href="/projects/<%= @volunteer.project.id %>">Back to <%= @volunteer.project.name %></a>
+<a href="/projects/<%= @volunteer.project.id %>">Back to <%= @volunteer.project.title %></a>
