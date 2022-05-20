@@ -48,5 +48,4 @@ class Volunteer
       nil
     end
   end
-
 end
