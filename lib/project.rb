@@ -20,4 +20,8 @@ class Project
     @id = result.first.fetch("id").to_i
   end
 
+  def ==(project_to_compare)
+    self.name == project_to_compare.name
+  end
+
 end
