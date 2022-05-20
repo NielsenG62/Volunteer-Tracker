@@ -24,4 +24,9 @@ class Volunteer
     end
   end
 
+  def self.all
+    returned_volunteers = DB.exec("SELECT * FROM volunteers;")
+    volunteers = []
+  end
+
 end
