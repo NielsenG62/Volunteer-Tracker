@@ -19,7 +19,9 @@ end
 
 post('/projects') do
   title = params[:title]
-  project = Project.new({:title => title, :id => nil})
-  project.save
+  if title.downcase.count('a-z') > 0
+    project = Project.new({:title => title, :id => nil})
+    project.save
+  end
   redirect to('/projects')
 end
