@@ -51,7 +51,7 @@ delete('/projects/:id') do
 end
 
 get('/projects/:id/volunteers/:volunteer_id') do
-  @volunteer = Volunteer.find(params[:id].to_i())
+  @volunteer = Volunteer.find(params[:volunteer_id].to_i())
   erb(:volunteer)
 end
 

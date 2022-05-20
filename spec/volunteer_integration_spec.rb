@@ -61,3 +61,16 @@ describe 'the volunteer detail page path', {:type => :feature} do
     expect(page).to have_content('Jasmine')
   end
 end
+
+# describe 'the volunteer detail page path', {:type => :feature} do
+#   it 'shows a volunteer detail page' do
+#     test_project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+#     test_project.save
+#     project_id = test_project.id.to_i
+#     test_volunteer = Volunteer.new({:name => 'Jasmine', :project_id => project_id, :id => nil})
+#     test_volunteer.save
+#     volunteer_id = te
+#     visit "/projects/#{project_id}/volunteers/#{volunteer_id}"
+#     expect(page).to have_content('Jasmine')
+#   end
+# end
