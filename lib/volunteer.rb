@@ -52,4 +52,10 @@ class Volunteer
   def project
     Project.find(@project_id)
   end
+
+
+  def update(attributes)
+    @name = attributes.fetch(:name)
+    DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE  id = #{@id};")
+  end
 end

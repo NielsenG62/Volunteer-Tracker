@@ -66,11 +66,11 @@ describe Volunteer do
   end
 
   describe '#update' do
-  it 'allows a user to update a volunteer' do
-    volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
-    volunteer1.save
-    volunteer1.update({:name => 'Fred', :id => nil})
-    expect(project.title).to eq 'Teaching Ruby to Kids'
-  end
+    it 'allows a user to update a volunteer' do
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
+      volunteer1.save
+      volunteer1.update({:name => 'Fred', :id => nil})
+      expect(volunteer1.name).to eq 'Fred'
+    end
   end
 end
