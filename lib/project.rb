@@ -24,4 +24,9 @@ class Project
     self.name == project_to_compare.name
   end
 
+  def self.all
+    returned_projects = DB.exec("SELECT * FROM projects;")
+    projects = []
+  end
+
 end
